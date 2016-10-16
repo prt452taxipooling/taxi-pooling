@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+  >
+ 
+ <ImageView
+ android:id="@+id/commentorImage"
+ android:layout_width="50dp"
+ android:layout_height="50dp"
+ android:padding="5dp"
+ android:src="@drawable/picon_selected" />
+
+ <TextView
+     android:id="@+id/commentor"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_toRightOf="@+id/commentorImage"
+     android:textSize="18dp"
+     android:fontFamily="Droid Serif"
+     android:text="commentor" />
+
+ <TextView
+     android:id="@+id/comment"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_toRightOf="@+id/commentorImage"
+     android:layout_alignLeft="@+id/commentor"
+     android:layout_alignParentRight="true"
+     android:layout_below="@+id/commentor"
+     android:text="comment" />
+ 
+</RelativeLayout>

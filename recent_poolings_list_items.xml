@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="2dp" >
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1" >
+
+        <TextView
+            android:id="@+id/tv_destination_recentPoolingsItem"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Destination : " />
+
+        <TextView
+            android:id="@+id/tv_destination"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_destination_recentPoolingsItem"
+            android:layout_height="wrap_content"
+            android:text="destination from database" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout2"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/tv_dateTime_recentPoolingsItem"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date/Time : " />
+
+        <TextView
+            android:id="@+id/tv_dateTime"
+            android:layout_below="@+id/tv_dateTime_recentPoolingsItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="date or time from database" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/tv_source_recentPoolingsItem"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Source : " />
+
+        <TextView
+            android:id="@+id/tv_source"
+            android:layout_below="@+id/tv_source_recentPoolingsItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="source from database" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttonRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layout3" >
+
+        <ImageView
+            android:id="@+id/editPooling"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignTop="@+id/startPooling"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/edit" />
+
+        <ImageView
+            android:id="@+id/startPooling"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_toRightOf="@+id/editPooling"
+            android:padding="5dp"
+            android:src="@drawable/time29" />
+
+        <ImageView
+            android:id="@+id/complete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_toRightOf="@+id/startPooling"
+            android:padding="5dp"
+            android:src="@drawable/ok" />
+
+        <ImageView
+            android:id="@+id/deletePooling"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignTop="@+id/complete"
+            android:layout_toRightOf="@+id/complete"
+            android:padding="5dp"
+            android:src="@drawable/delete" />
+
+        <ImageView
+            android:id="@+id/cancelPooling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/complete"
+            android:layout_toRightOf="@+id/complete"
+            android:padding="5dp"
+            android:src="@drawable/cancel" />
+    </RelativeLayout>
+
+</RelativeLayout>

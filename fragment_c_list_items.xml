@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/senderImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="5dp"
+            android:src="@drawable/picon_selected" />
+
+        <TextView
+            android:id="@+id/senderName"
+            style="@style/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/senderImage"
+            android:text="sender" />
+
+    </RelativeLayout>
+   
+     <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" 
+         android:padding="3dp"
+         android:layout_below="@+id/relativeLayout1"
+         android:id="@+id/relative2">
+
+    <TextView
+        android:id="@+id/going"
+        style="@style/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="going" />
+    <TextView
+        android:id="@+id/src"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/going"
+        android:text="source" />
+    </RelativeLayout>
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:layout_below="@+id/relative3">
+     <TextView
+        android:id="@+id/dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="At" />
+</RelativeLayout>
+   
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:padding="3dp"
+        android:id="@+id/relative3"
+        android:layout_below="@+id/relative2" >
+
+        <TextView
+            android:id="@+id/to"
+            style="@style/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To" />
+
+        <TextView
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/to"
+            android:text="destination" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

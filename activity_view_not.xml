@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.taxipooling.ViewNotActivity" >
+
+    <RatingBar
+        android:id="@+id/ratingBar_view_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImage"
+        android:layout_centerHorizontal="true"
+        android:isIndicator="true"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:stepSize="0.1" />
+
+    <ListView
+        android:id="@+id/commentList_view_not"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rejectButton_view_not"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/feedback_view_not" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/rejectButton_view_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/poolingCreatedNumber_view_not"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#FF2E12"
+        android:text="Reject" />
+
+    <Button
+        android:id="@+id/acceptButton_view_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/commentList_view_not"
+        android:layout_toLeftOf="@+id/rejectButton_view_not"
+        android:background="#00C13F"
+        android:text="Accept" />
+
+    <TextView
+        android:id="@+id/ratingComment_view_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ratingBar_view_not"
+        android:layout_centerHorizontal="true"
+        android:text="rating view"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/feedback_view_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/poolingCreated_view_not"
+        android:text="Comments"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/poolingCreatedNumber_view_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/feedback_view_not"
+        android:layout_alignRight="@+id/ratingBar_view_not"
+        android:text=""
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/picon" />
+
+    <TextView
+        android:id="@+id/username_view_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@+id/poolingCreated_view_not"
+        android:text="Muhammad Noman Khan"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/userType_view_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_view_not"
+        android:layout_toRightOf="@+id/poolingCreated_view_not"
+        android:text="passenger"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/poolingCreated_view_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/feedback_view_not"
+        android:layout_below="@+id/ratingBar_view_not"
+        android:text="Pooling Created"
+        android:textSize="12dp" />
+
+</RelativeLayout>

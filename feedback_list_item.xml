@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+
+    <EditText
+        android:id="@+id/et_comment_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/dislikeButton"
+        android:layout_below="@+id/poolerImage"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="leave your comment"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/tv_poolerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/likeButton"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/poolerImage"
+        android:text="Medium Text"
+        style="@style/username"/>
+
+    <ImageView
+        android:id="@+id/poolerImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/picon" />
+
+    <ImageButton
+        android:id="@+id/likeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/poolerImage"
+        android:layout_alignLeft="@+id/tv_poolerName"
+        android:layout_marginLeft="19dp"
+        android:background="#ffffff"
+        android:src="@drawable/like_empty" />
+
+    <TextView
+        android:id="@+id/tv_Like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/likeButton"
+        android:layout_toRightOf="@+id/likeButton"
+        android:text="Like"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageButton
+        android:id="@+id/dislikeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_poolerName"
+        android:layout_toLeftOf="@+id/tv_dislike"
+        android:background="#ffffff"
+        android:src="@drawable/dislike_empty" />
+
+    <ImageButton
+        android:id="@+id/send_feeback"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et_comment_feedback"
+        android:layout_alignTop="@+id/et_comment_feedback"
+        android:layout_toRightOf="@+id/et_comment_feedback"
+        android:background="#ffffff"
+        android:src="@drawable/ok" />
+
+    <TextView
+        android:id="@+id/tv_dislike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dislikeButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:text="Dislike"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

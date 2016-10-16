@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.project.FragmentB" >
+
+    <Button
+        android:id="@+id/bone"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btwo"
+        android:background="@color/ghostwhite"
+        android:onClick="selectFrag"
+        android:text="Create"
+        android:textColor="@color/yellow" />
+
+    <FrameLayout
+        android:id="@+id/one"
+        android:name="com.example.project.NestedPoolingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bone" >
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btwo"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/one"
+        android:layout_alignParentRight="true"
+        android:background="@color/ghostwhite"
+        android:onClick="selectFrag"
+        android:text="Recent"
+        android:textColor="@color/yellow" />
+
+    <TextView
+        android:id="@+id/internetError"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#ff0000"
+        android:text="No Internet Connection"
+        android:visibility="gone"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
+<!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.project.FragmentB" >
+
+    TODO: Update blank fragment layout
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:shadowColor="#ffd700"
+                android:ems="10"
+                android:hint="Source" >
+
+                <requestFocus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </EditText>
+
+            <EditText
+                android:id="@+id/destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/source"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Destination" />
+
+            <ImageButton
+                android:id="@+id/destsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_alignTop="@+id/destination"
+                android:background="#FFD700"
+                android:src="@drawable/abc_ic_search" />
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/destination"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Date" />
+
+            <EditText
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Time" />
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/time"
+                android:layout_marginTop="64dp"
+                android:background="#FFD700"
+                android:text="Send" />
+
+            <ImageButton
+                android:id="@+id/sourceSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_alignTop="@+id/source"
+                android:background="#FFD700"
+                android:src="@drawable/abc_ic_search" />
+            
+    
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_recentPooling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Recent" />
+
+    
+
+</RelativeLayout>
+-->
