@@ -1,4 +1,4 @@
--- Merging decision tree log ---
+-- Merging decision log ---
 manifest
 ADDED from G:\AnroidStudioWorkSpace\TaxiPooling\app\src\main\AndroidManifest.xml:2:1-155:12
 	package
