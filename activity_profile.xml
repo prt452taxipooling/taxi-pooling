@@ -1,108 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context="${relativePackage}.${activityClass}" >
- <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp" >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:orientation="vertical" >
-    <TextView
-        android:id="@+id/changepassTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change Password" />
-
-    <EditText
-        android:id="@+id/oldPassET"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/changepassTV"
-        android:ems="10"
-        android:hint="Old password"
-        android:inputType="textPassword" >
-    </EditText>
-
-    <EditText
-        android:id="@+id/newPassET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/oldPassET"
-        android:ems="10"
-        android:hint="New password"
-        android:inputType="textPassword" />
-
-
-
-    <TextView
-        android:id="@+id/changeNameTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/newEmailET"
-        android:layout_below="@+id/newEmailET"
-        android:text="Change your name" />
-
-    <EditText
-        android:id="@+id/newNameET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/changeNameTV"
-        android:ems="10"
-        android:hint="New name"
-        android:inputType="textPersonName" />
-
-    <CheckBox
-        android:id="@+id/loginNoCHK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/newNameET"
-        android:text="Login with your number" />
-
-    <EditText
-        android:id="@+id/numberET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/loginNoCHK"
-        android:ems="10"
-        android:hint="03001234567"
-        android:inputType="text"
-        android:visibility="invisible" >
-    </EditText>
-
-    <ImageView
-        android:id="@+id/userImage"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/picon" />
-
-    <TextView
-        android:id="@+id/errorMsg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/numberET"
-        android:text="status.."
-        android:textColor="#ff0000"
-        android:textSize="20dp"
-        android:visibility="invisible" />
 
     <Button
         android:id="@+id/saveProfileB"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:background="#FFD700"
+        android:text=" Save "
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/numberET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/newPassET"
+        android:layout_alignTop="@+id/loginNoCHK"
+        android:ems="10"
+        android:hint="03001234567"
+        android:inputType="text"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/errorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/loginNoCHK"
+        android:layout_centerVertical="true"
+        android:text="status.."
+        android:textColor="#ff0000"
         android:textSize="20dp"
-        android:text=" Save " />
-     </LinearLayout>
-    </ScrollView>
+        android:visibility="invisible" />
 
+    <EditText
+        android:id="@+id/newPassET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/oldPassET"
+        android:layout_alignBottom="@+id/oldPassET"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/oldPassET"
+        android:ems="10"
+        android:hint="New password"
+        android:inputType="textPassword" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/changeNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/newNameET"
+        android:layout_alignLeft="@+id/newNameET"
+        android:text="Change your name" />
+
+    <EditText
+        android:id="@+id/oldPassET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/errorMsg"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="Old password"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/newNameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/changepassTV"
+        android:layout_alignLeft="@+id/oldPassET"
+        android:ems="10"
+        android:hint="New name"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/changepassTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/oldPassET"
+        android:layout_alignLeft="@+id/oldPassET"
+        android:text="Change Password" />
+
+    <CheckBox
+        android:id="@+id/loginNoCHK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/newNameET"
+        android:layout_below="@+id/errorMsg"
+        android:text="Login with your number" />
+
+</RelativeLayout>

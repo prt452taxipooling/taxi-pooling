@@ -7,19 +7,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity" >
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp">
+    <EditText
+        android:id="@+id/un_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Someone@example.com"
+        android:inputType="textEmailAddress"
+        android:saveEnabled="true" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
+    <EditText
+        android:id="@+id/pass_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/un_edittext"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" >
+    </EditText>
+    
+    <TextView
                 android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -29,91 +41,39 @@
                 android:textSize="16dp"
                 android:visibility="invisible" />
 
-            <Button
-                android:id="@+id/register"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_alignLeft="@+id/login"
-                android:layout_below="@+id/newtaxipooling_textview"
-                android:background="@drawable/signup"
-                android:text="Create New Account"
-                android:textColor="#ffffff"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/newtaxipooling_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/register"
-                android:layout_below="@+id/login"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:text="New to Taxi Pooling?"
-                android:textSize="18dp" />
-
-            <Button
-                android:id="@+id/login"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_alignLeft="@+id/pass_edittext"
-                android:layout_below="@+id/status"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/login_button"
-                android:text="login"
-                android:textColor="#ffffff"
-                android:textSize="18dp" />
-
-
-            <EditText
-                android:id="@+id/pass_edittext"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_alignLeft="@+id/status"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="150dp"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword"></EditText>
-
-            <EditText
-                android:id="@+id/un_edittext"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_alignBottom="@+id/pass_edittext"
-                android:layout_alignLeft="@+id/pass_edittext"
-                android:layout_marginBottom="50dp"
-                android:ems="10"
-                android:hint="Someone@example.com"
-                android:inputType="textEmailAddress"
-                android:saveEnabled="true"></EditText>
-        </RelativeLayout>
-    </ScrollView>
-
-    <TextView
-        android:id="@+id/internetError"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/scrollView1"
-        android:background="#ff0000"
-        android:text="                          No Internet Connection"
-        android:textColor="#ffffff" />
-
-    <EditText
-        android:id="@+id/serveraddress"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:ems="10"
-        android:hint="server address"
-        android:inputType="text"></EditText>
-
     <Button
-        android:id="@+id/saveaddress"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/serveraddress"
-        android:text="Save" />
+        android:layout_alignLeft="@+id/status"
+        android:layout_alignRight="@+id/un_edittext"
+        android:layout_below="@+id/status"
+        android:background="@drawable/login_button"
+        android:text="login"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/newtaxipooling_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/status"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/pass_edittext"
+        android:text="New to Taxi Pooling?"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/login"
+        android:layout_alignBottom="@+id/login"
+        android:layout_alignLeft="@+id/newtaxipooling_textview"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/signup"
+        android:text="Create New Account"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
 </RelativeLayout>

@@ -1,93 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/login_background2"
-    android:gravity="center"
     android:orientation="vertical" >
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_height="wrap_content" >
+    <EditText
+        android:id="@+id/signup_usernameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="66dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-           
-            android:orientation="vertical" >
+    <EditText
+        android:id="@+id/signup_passwordET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/signup_usernameET"
+        android:layout_toRightOf="@+id/signup_usernameET"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
 
-            <EditText
-                android:id="@+id/signup_usernameET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:ems="10"
-                android:hint="Username"
-                android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/signup_conpasswordET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_passwordET"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword" />
 
-            <EditText
-                android:id="@+id/signup_passwordET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/signup_emailET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/signup_conpasswordET"
+        android:layout_alignBottom="@+id/signup_conpasswordET"
+        android:layout_alignLeft="@+id/signup_usernameET"
+        android:ems="10"
+        android:hint="Email" >
 
-            <EditText
-                android:id="@+id/signup_conpasswordET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Confirm Password"
-                android:inputType="textPassword" />
+        <requestFocus />
+    </EditText>
 
-            <EditText
-                android:id="@+id/signup_emailET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Email" >
-            </EditText>
+    <CheckBox
+        android:id="@+id/signup_driverCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_emailET"
+        android:layout_below="@+id/signup_emailET"
+        android:text="If taxi driver"
+        android:textSize="18dp" />
 
-            <EditText
-                android:id="@+id/signup_locationET"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:ems="10"
-                android:hint="Location" />
+    <EditText
+        android:id="@+id/signup_taxinoET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/signup_driverCB"
+        android:layout_alignRight="@+id/signup_conpasswordET"
+        android:ems="10"
+        android:hint="Taxi no"
+        android:visibility="invisible" />
 
-            <CheckBox
-                android:id="@+id/signup_driverCB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="If taxi driver"
-                android:textSize="18dp" />
+    <Button
+        android:id="@+id/signup_signupBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_driverCB"
+        android:layout_alignRight="@+id/signup_emailET"
+        android:layout_below="@+id/signup_driverCB"
+        android:background="@drawable/signup"
+        android:text="Sign up"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
 
-            <EditText
-                android:id="@+id/signup_taxinoET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Taxi no"
-                android:visibility="invisible" />
+    <Button
+        android:id="@+id/signup_cancelBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_taxinoET"
+        android:layout_alignRight="@+id/signup_taxinoET"
+        android:layout_below="@+id/signup_taxinoET"
+        android:text="Cancel"
+        android:textSize="18dp" />
 
-            <Button
-                android:id="@+id/signup_signupBTN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/signup"
-                android:text="Sign up"
-                android:textColor="#ffffff"
-                android:textSize="18dp" />
-
-            <Button
-                android:id="@+id/signup_cancelBTN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cancel"
-                android:textSize="18dp" />
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+</RelativeLayout>

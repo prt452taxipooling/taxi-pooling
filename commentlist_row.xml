@@ -6,9 +6,8 @@
  
  <ImageView
  android:id="@+id/commentorImage"
- android:layout_width="50dp"
- android:layout_height="50dp"
- android:padding="5dp"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
  android:src="@drawable/picon_selected" />
 
  <TextView
@@ -16,8 +15,6 @@
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_toRightOf="@+id/commentorImage"
-     android:textSize="18dp"
-     android:fontFamily="Droid Serif"
      android:text="commentor" />
 
  <TextView
